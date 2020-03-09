@@ -1,0 +1,90 @@
+/* pages/index/index.wxss */
+/*swiper*/
+.book_msg{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.book_name{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 22rpx;
+}
+.sc_tip{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:#FAB91C;
+  margin-bottom: 22rpx;
+}
+.sc_box{
+  width:220rpx;
+}
+.sc_img{
+  width:220rpx;
+  height: 220rpx;
+  border-radius:10rpx;
+  overflow: hidden;
+  margin-bottom: 17rpx;
+}
+.sc_img image{
+  width: 100%;
+  height: 100%;
+}
+.sc_type{
+  text-align: center;
+  font-size: 26rpx;
+  color: #999;
+}
+.hengxian{
+  width: 100%;
+  background: #eee;
+  height:20rpx;
+}
+.fb_msg{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.fb_tit{
+  font-size:24rpx;
+font-family:PingFangSC;
+font-weight:400;
+color:#333;
+}
+.fb_li{
+  height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.fb_li+.fb_tit{
+  margin-top: 30rpx;
+}
+.fb_bt{
+  font-size: 30rpx;
+  color: #FAB91C;
+}
+.fb_name{
+  font-size: 30rpx;
+  color: #666;
+  width: 130rpx;
+}
+.fb_int{
+  flex: 1;
+  font-size: 30rpx;
+  color: #333;
+}
+.fb_dw{
+  font-size: 30rpx;
+  color: #bbb;
+}
+.sub_btn{
+  margin-top: 60rpx;
+  width:694rpx;
+  height:80rpx;
+  background:rgba(250,185,28,1);
+  border-radius:10rpx;
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 100rpx;
+}

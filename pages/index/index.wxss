@@ -1,0 +1,87 @@
+/* pages/index/index.wxss */
+/*swiper*/
+.banner_box{
+	width: 100%;
+}
+.swiper{	
+	width: 100%;
+	height: 380rpx;
+}
+.swiper image{
+	width: 100%;
+	height: 380rpx;
+}
+.sousuo_k{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.sousuo_box{
+  width: 100%;
+  height: 55rpx;
+  border-radius: 55rpx;
+  overflow: hidden;
+  background: #eeeeee;
+}
+.sousuo_box text{
+  margin: 0 10rpx;
+  color: #bbbbbb;
+}
+.sousuo_box input{
+  flex: 1;
+  font-size: 26rpx;
+}
+.sousuo_box view{
+  width: 127rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+  background: #857dee;
+  color: #fff;
+  font-size: 26rpx;
+}
+.ss_list_k{
+   width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.ss_list{
+  width: 100%;
+  border-radius: 10rpx;
+  box-shadow:0px 0px 10rpx #eee;
+  margin-bottom: 30rpx;
+}
+.ss_li{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 80rpx;
+}
+.ss_li+.ss_li{
+border-top: 1px solid #eee;
+}
+.zhuyi_list{
+  position: relative;
+  width: 100%;
+  padding: 112rpx 30rpx 60rpx;
+  box-sizing: border-box;
+}
+.zhuyi_img{
+  position: absolute;
+  left: -10rpx;
+  top: 30rpx;
+  width: 158rpx;
+  height: 60rpx;
+}
+.zhuyi_list view{
+  width: 100%;
+  /* height: 50rpx; */
+
+  line-height: 40rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}

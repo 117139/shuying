@@ -1,0 +1,38 @@
+<!--pages/index/index.wxml-->
+<import src="/utils/htmlStatus/index.wxml" />
+<import src="../../vendor/wxParse/wxParse.wxml" />
+<wxs src="../../utils/filter.wxs" module="filter" />
+<template is="htmlStatus" data="{{...htmlStatus}}" />
+<view class="container">
+	<view wx:if="{{banner.length>0}}" class="banner_box">
+		<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+		 indicator-active-color='#fff' circular="{{circular}}">
+			<block wx:for="{{banner}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+				<swiper-item class="swiper_item">
+					<image mode="aspectFill" wx:if="{{item}}" lazy-load='true' src="{{filter.imgIP(item.pic)}}" class="slide-image" />
+					<!-- <image lazy-load='true' src="{{item.url}}" class="slide-image" /> -->
+
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="sousuo_k">
+    <view class="sousuo_box dis_flex aic">
+      <text class="iconfont icon-sousuo"></text>
+      <input placeholder="输入书名" bindinput="ss_name" bindconfirm="sousuo" confirm-type='search' value="{{search_name}}"></input>
+      <view bindtap="sousuo">搜索</view>
+    </view>
+  </view>
+  <!-- <view class="ss_list_k" wx:if="{{ss_data.length>0}}">
+    <view class="ss_list">
+    <view class="ss_li oh1" wx:for="{{ss_data}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" data-name="{{item.title}}" bindtap="jumpsc" >{{item.title_num}}</view>
+    <view wx:if="{{ss_data.length>19}}" class="ss_li tac" bindtap="sousuo1">加载更多</view>
+    </view>
+  </view> -->
+  <view class="ss_list_k ">
+    <view class="ss_list zhuyi_list">
+      <image class="zhuyi_img" src="../../static/images/zhuyi.png"></image>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<image-cropper id="image-cropper" limit_move="{{true}}" disable_rotate="{{true}}" width="{{width}}" height="{{height}}" imgSrc="{{src}}" limit_move="{{limit_move}}" disable_width="{{disable_width}}" disable_height="{{disable_height}}" bindload="cropperload" bindimageload="loadimage" bindtapcut="clickcut"></image-cropper>
+
+<view class='btn flex flex-align-center flex-pack-justify'>
+  <view class='subbtn left' catchtouchstart='rotate' catchtouchend='end' data-type="rotate">旋转</view>
+  <view class='subbtn' bindtap='submit'>上传</view>
+</view>

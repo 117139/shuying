@@ -1,0 +1,4 @@
+/* pages/imageCropper/imageCropper.wxss */
+image-cropper{
+  height: 800rpx;
+}

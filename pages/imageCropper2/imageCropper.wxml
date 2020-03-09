@@ -1,0 +1,12 @@
+<import src="../../vendor/we-cropper/we-cropper.wxml"/>
+
+<view class="cropper-wrapper">
+    <template is="we-cropper" data="{{...cropperOpt}}"/>
+     <view class="cropper-buttons flex flex-align-center flex-pack-center">
+    <view
+      class="getCropperImage btn btn_bg"
+      bindtap="getCropperImage">
+      发布图片
+    </view>
+  </view>
+</view>

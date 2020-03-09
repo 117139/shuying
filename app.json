@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cropper/cropper",
+    "pages/cropper/cropper-example",
+    "pages/shangchuan/shangchuan",
+    "pages/imageCropper/imageCropper",
+    "pages/imageCropper3/imageCropper",
+    "pages/imageCropper1/imageCropper",
+    "pages/imageCropper2/imageCropper",
+    "pages/login/login"
+    
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#f4f4f4",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "书影留痕",
+    "navigationBarTextStyle": "black"
+  },
+  
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-stepper": "vendor/vant/lib/stepper/index",
+    "van-submit-bar": "vendor/vant/lib/submit-bar/index",
+    "van-popup": "vendor/vant/lib/popup/index",
+    "van-action-sheet": "vendor/vant/lib/action-sheet/index"
+  }
+}
