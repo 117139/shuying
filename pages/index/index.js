@@ -125,31 +125,33 @@ Page({
           var rlist=res.data.data.data
           if (rlist.length >0){
             
-            wx.showToast({
+            /*wx.showToast({
               icon: 'none',
               title: '书名已存在,拍张更好的',
             })
             that.setData({
               search_name:''
-            })
-            /*wx.showModal({
-              // title: '提示',
-              content: '书名已存在,拍张更好的',
-              success(res) {
-                if (res.confirm) {
-                  console.log('用户点击确定')
-                  // wx.navigateTo({
-                  //   url: '/pages/shangchuan/shangchuan?name=' + that.data.search_name,
-                  // })
-                } else if (res.cancel) {
-                  console.log('用户点击取消')
-                }
-              }
             })*/
             /*that.setData({
               ss_data: rlist,
               pages: 2
             })*/
+            wx.showModal({
+              // title: '提示',
+              content: '此图书书影已存在，是否继续添加',
+              confirmText:'继续添加',
+              success(res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                  wx.navigateTo({
+                    url: '/pages/shangchuan/shangchuan?name=' + that.data.search_name,
+                  })
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                }
+              }
+            })
+            
           }
          
 

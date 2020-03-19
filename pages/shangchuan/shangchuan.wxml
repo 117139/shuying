@@ -10,21 +10,21 @@
     <view class="sc_img_box dis_flex ju_b">
       <view class="sc_box" data-type="1" bindtap="scpic">
         <view class="sc_img">
-          <image src="{{book_img1?filter.imgIP(book_img1):'../../static/images/scimg.png'}}"></image>
+          <image mode="aspectFit" src="{{book_img1?filter.imgIP(book_img1):'../../static/images/scimg.png'}}"></image>
         </view>
         <view class="sc_type">(书脊)</view>
         <input hidden="hidden" name="book_img1" value="{{book_img1}}"></input>
       </view>
       <view class="sc_box" data-type="2" bindtap="scpic">
         <view class="sc_img">
-          <image src="{{book_img2?filter.imgIP(book_img2):'../../static/images/scimg.png'}}"></image>
+          <image mode="aspectFit" src="{{book_img2?filter.imgIP(book_img2):'../../static/images/scimg.png'}}"></image>
         </view>
         <view class="sc_type">(封面)</view>
          <input hidden="hidden" name="book_img2" value="{{book_img2}}"></input>
       </view>
       <view class="sc_box" data-type="3" bindtap="scpic">
         <view class="sc_img">
-          <image src="{{book_img3?filter.imgIP(book_img3):'../../static/images/scimg.png'}}"></image>
+          <image  mode="aspectFit" src="{{book_img3?filter.imgIP(book_img3):'../../static/images/scimg.png'}}"></image>
         </view>
         <view class="sc_type">(其他)</view>
          <input hidden="hidden" name="book_img3" value="{{book_img3}}"></input>

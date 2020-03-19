@@ -23,12 +23,12 @@
       <view bindtap="sousuo">搜索</view>
     </view>
   </view>
-  <!-- <view class="ss_list_k" wx:if="{{ss_data.length>0}}">
+  <view class="ss_list_k" wx:if="{{ss_data.length>0}}">
     <view class="ss_list">
     <view class="ss_li oh1" wx:for="{{ss_data}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" data-name="{{item.title}}" bindtap="jumpsc" >{{item.title_num}}</view>
     <view wx:if="{{ss_data.length>19}}" class="ss_li tac" bindtap="sousuo1">加载更多</view>
     </view>
-  </view> -->
+  </view>
   <view class="ss_list_k ">
     <view class="ss_list zhuyi_list">
       <image class="zhuyi_img" src="../../static/images/zhuyi.png"></image>

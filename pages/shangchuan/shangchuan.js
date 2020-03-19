@@ -85,22 +85,55 @@ Page({
   scpic(e) {
     var that = this
     console.log(e.currentTarget.dataset.type)
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
+    wx.showActionSheet({
+      itemList: ['拍照上传', '本地图片'],
       success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        console.log(res)
-        const tempFilePaths = res.tempFilePaths
-        wx.navigateTo({
-          url: '/pages/cropper/cropper-example?image=' + tempFilePaths + '&type=' + e.currentTarget.dataset.type,
-        })
-        /*const imglen = that.data.imgb.length
-        that.upimg(tempFilePaths, 0)*/
+        console.log(res.tapIndex)
+        if (res.tapIndex == 0) {
+          //拍照
+          wx.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType: [ 'camera'],
+            success(res) {
+              // tempFilePath可以作为img标签的src属性显示图片
+              console.log(res)
+              const tempFilePaths = res.tempFilePaths
+              wx.navigateTo({
+                url: '/pages/cropper/cropper-example?image=' + tempFilePaths + '&type=' + e.currentTarget.dataset.type,
+              })
+              /*const imglen = that.data.imgb.length
+              that.upimg(tempFilePaths, 0)*/
 
+            }
+          })
+        }
+        if (res.tapIndex==1){
+          //本地
+          wx.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album'],
+            success(res) {
+              // tempFilePath可以作为img标签的src属性显示图片
+              console.log(res)
+              const tempFilePaths = res.tempFilePaths
+              wx.navigateTo({
+                url: '/pages/cropper/cropper-example?image=' + tempFilePaths + '&type=' + e.currentTarget.dataset.type,
+              })
+              /*const imglen = that.data.imgb.length
+              that.upimg(tempFilePaths, 0)*/
+
+            }
+          })
+        }
+      },
+      fail(res) {
+        console.log(res.errMsg)
       }
     })
+    return
+    
   },
   upimg(imgs, i) {
     var that = this
