@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.8",
+	"libVersion": "2.10.3",
 	"appid": "wx2eb933644cc4a083",
 	"projectname": "shuying",
 	"simulatorType": "wechat",

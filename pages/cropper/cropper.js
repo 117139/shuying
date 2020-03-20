@@ -163,8 +163,20 @@ Component({
 
             let boxLeft = (stageWidth - boxWidth) / 2;
             let boxTop = (stageHeight - boxHeight) / 2;
-
-
+            var bili=1;
+            var max_z=640;
+            if (imageWidth > imageHeight){
+              if (imageWidth>max_z){
+                imageHeight = imageHeight * (max_z / imageWidth)
+                imageWidth=max_z
+              }
+            }else{
+              if (imageHeight > max_z) {
+                imageWidth = imageWidth * (max_z / imageHeight)
+                imageHeight = max_z
+              }
+            }
+            console.log(imageWidth, imageHeight)
             _self.setData({
               imagePath: imagePath,
               canvasWidth: imageWidth * pixelRatio,

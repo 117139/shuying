@@ -82,6 +82,23 @@ Page({
   onShareAppMessage: function () {
 
   },
+  scpic1(e) {
+    var that = this
+    console.log(e.currentTarget.dataset.type)
+    wx.showActionSheet({
+      itemList: ['拍照上传', '本地图片'],
+      success(res) {
+        console.log(res.tapIndex)
+        wx.navigateTo({
+          url: '/pages/cropper/cropper-example?tapIndex=' + res.tapIndex + '&type=' + e.currentTarget.dataset.type,
+        })
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
+
+  },
   scpic(e) {
     var that = this
     console.log(e.currentTarget.dataset.type)
@@ -94,13 +111,14 @@ Page({
           wx.chooseImage({
             count: 1,
             sizeType: ['original', 'compressed'],
-            sourceType: [ 'camera'],
+            sourceType: ['camera'],
             success(res) {
               // tempFilePath可以作为img标签的src属性显示图片
               console.log(res)
               const tempFilePaths = res.tempFilePaths
+              wx.setStorageSync('image_c', tempFilePaths[0])
               wx.navigateTo({
-                url: '/pages/cropper/cropper-example?image=' + tempFilePaths + '&type=' + e.currentTarget.dataset.type,
+                url: '/pages/cropper/cropper-example?&type=' + e.currentTarget.dataset.type,
               })
               /*const imglen = that.data.imgb.length
               that.upimg(tempFilePaths, 0)*/
@@ -108,7 +126,7 @@ Page({
             }
           })
         }
-        if (res.tapIndex==1){
+        if (res.tapIndex == 1) {
           //本地
           wx.chooseImage({
             count: 1,
@@ -118,8 +136,9 @@ Page({
               // tempFilePath可以作为img标签的src属性显示图片
               console.log(res)
               const tempFilePaths = res.tempFilePaths
+              wx.setStorageSync('image_c', tempFilePaths[0])
               wx.navigateTo({
-                url: '/pages/cropper/cropper-example?image=' + tempFilePaths + '&type=' + e.currentTarget.dataset.type,
+                url: '/pages/cropper/cropper-example?&type=' + e.currentTarget.dataset.type,
               })
               /*const imglen = that.data.imgb.length
               that.upimg(tempFilePaths, 0)*/
@@ -132,8 +151,7 @@ Page({
         console.log(res.errMsg)
       }
     })
-    return
-    
+
   },
   upimg(imgs, i) {
     var that = this
