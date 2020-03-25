@@ -110,7 +110,7 @@ Page({
           //拍照
           wx.chooseImage({
             count: 1,
-            sizeType: ['original', 'compressed'],
+            sizeType: ['original'],
             sourceType: ['camera'],
             success(res) {
               // tempFilePath可以作为img标签的src属性显示图片
@@ -130,7 +130,7 @@ Page({
           //本地
           wx.chooseImage({
             count: 1,
-            sizeType: ['original', 'compressed'],
+            sizeType: ['original'],
             sourceType: ['album'],
             success(res) {
               // tempFilePath可以作为img标签的src属性显示图片

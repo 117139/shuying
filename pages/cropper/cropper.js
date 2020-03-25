@@ -505,8 +505,10 @@ Component({
 
 
 
-      let dWidth = Math.ceil(sWidth * pixelRatio);
-      let dHeight = Math.ceil(sHeight * pixelRatio);
+      // let dWidth = Math.ceil(sWidth * pixelRatio);
+      // let dHeight = Math.ceil(sHeight * pixelRatio); 
+      let dWidth = Math.ceil(_self.data.canvasWidth * pixelRatio);
+      let dHeight = Math.ceil(_self.data.canvasHeight * pixelRatio);
 
 
 

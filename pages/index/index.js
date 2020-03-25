@@ -143,6 +143,9 @@ Page({
               success(res) {
                 if (res.confirm) {
                   console.log('用户点击确定')
+                  // that.setData({
+                  //   search_name: ''
+                  // })
                   wx.navigateTo({
                     url: '/pages/shangchuan/shangchuan?name=' + that.data.search_name,
                   })
@@ -162,9 +165,13 @@ Page({
               title: '书名不存在'
             })*/
             /*setTimeout(function(){*/
+           
               wx.navigateTo({
                 url: '/pages/shangchuan/shangchuan?name=' + that.data.search_name,
               })
+            that.setData({
+              search_name: ''
+            })
             /*},500)*/
             
           }
